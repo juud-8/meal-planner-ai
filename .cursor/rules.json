@@ -1,0 +1,39 @@
+{
+    "rules": [
+      {
+        "name": "Project Stack Guidance",
+        "when": {
+          "activeFile": ".*"
+        },
+        "instruction": "This project is an AI-powered meal planner built with Next.js 14 (App Router), TypeScript, Tailwind CSS, and shadcn/ui for the frontend. The backend is Supabase (Postgres, Auth, Storage, RLS). We use OpenAI API for AI capabilities. Prioritize clean, idiomatic TypeScript, functional components, and Tailwind for styling. Keep accessibility in mind. For tests, prefer Playwright for e2e and Vitest for units. Use Supabase CLI for migrations. Avoid unnecessary libraries or complex patterns unless explicitly requested. Always consider user privacy and compliance with GDPR/HIPAA/FDA guidelines as stated in the project brief."
+      },
+      {
+        "name": "File Structure Preference",
+        "when": {
+          "activeFile": ".*"
+        },
+        "instruction": "Always create new React components in `src/components/`, pages in `src/app/`, and utility functions in `src/lib/`. Supabase migrations go into `supabase/migrations/`."
+      },
+      {
+        "name": "shadcn/ui Usage",
+        "when": {
+          "activeFile": ".*\\.tsx$"
+        },
+        "instruction": "When creating UI, always prefer shadcn/ui components where applicable. Import them from '@/components/ui/*' and ensure they are properly styled with Tailwind CSS."
+      },
+      {
+        "name": "TypeScript Strictness",
+        "when": {
+          "activeFile": ".*\\.ts$|.*\\.tsx$"
+        },
+        "instruction": "Adhere to strict TypeScript types. All functions, variables, and props should have explicit types."
+      },
+      {
+        "name": "Next.js App Router Conventions",
+        "when": {
+          "activeFile": ".*src/app/.*"
+        },
+        "instruction": "Follow Next.js 14 App Router conventions, including using 'use client' directives when necessary and understanding server components versus client components."
+      }
+    ]
+  }
