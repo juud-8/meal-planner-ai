@@ -16,7 +16,7 @@ export async function createClient() {
         set(name: string, value: string, options: Record<string, unknown>) {
           try {
             cookieStore.set({ name, value, ...options })
-          } catch (_error) {
+          } catch {
             // The `cookies()` may not be readable yet in a Server Component.
             // This error can be ignored if you are only setting cookies in a Server Action
             // or Route Handler from a client-side component.
@@ -25,7 +25,7 @@ export async function createClient() {
         remove(name: string, options: Record<string, unknown>) {
           try {
             cookieStore.set({ name, value: '', ...options })
-          } catch (_error) {
+          } catch {
             // The `cookies()` may not be readable yet in a Server Component.
             // This error can be ignored if you are only setting cookies in a Server Action
             // or Route Handler from a client-side component.
