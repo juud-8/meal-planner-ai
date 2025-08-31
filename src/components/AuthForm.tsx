@@ -39,7 +39,7 @@ export default function AuthForm() {
         setMessage('Check your email for the magic link!')
         setMagicLinkEmail('')
       }
-    } catch (error) {
+    } catch (_error) {
       setMessage('An unexpected error occurred. Please try again.')
     } finally {
       setIsLoading(false)
@@ -65,7 +65,7 @@ export default function AuthForm() {
         setEmail('')
         setPassword('')
       }
-    } catch (error) {
+    } catch (_error) {
       setMessage('An unexpected error occurred. Please try again.')
     } finally {
       setIsLoading(false)
@@ -94,7 +94,7 @@ export default function AuthForm() {
         setEmail('')
         setPassword('')
       }
-    } catch (error) {
+    } catch (_error) {
       setMessage('An unexpected error occurred. Please try again.')
     } finally {
       setIsLoading(false)
@@ -117,7 +117,7 @@ export default function AuthForm() {
       if (error) {
         setMessage(`Error: ${error.message}`)
       }
-    } catch (error) {
+    } catch (_error) {
       setMessage('An unexpected error occurred. Please try again.')
     } finally {
       setIsGoogleLoading(false)
